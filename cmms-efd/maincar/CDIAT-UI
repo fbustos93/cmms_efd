@@ -1,0 +1,48 @@
+import tkinter as tk
+from tkinter import ttk
+import subprocess
+import sys
+import os
+import newSYS
+import import_excel_ui
+import send_rsp_ui
+import asset_table
+import log_viewer
+
+path= "/Users/fbustos/Documents/CMMS-EFD copy/cmms-efd/maincar/main.py" #change for a dynamic way
+main_path= os.path.join(os.path.dirname(__file__), "..", path)
+main_path= os.path.abspath(main_path)
+
+def main():
+    root = tk.Tk()
+    root.title("CMMS Integration UI")
+    root.geometry("900x600")
+
+    notebook = ttk.Notebook(root)
+    notebook.pack(fill="both", expand=True)
+
+    tab1 = ttk.Frame(notebook)
+    notebook.add(tab1, text="New SYS")
+    newSYS.create_ui(tab1)
+
+    tab2 = ttk.Frame(notebook)
+    notebook.add(tab2, text="Import Excel")
+    import_excel_ui.create_ui(tab2)
+
+    tab3 = ttk.Frame(notebook)
+    notebook.add(tab3, text="Send Data RSP")
+    send_rsp_ui.create_ui(tab3)
+
+    tab4 = ttk.Frame(notebook)
+    notebook.add(tab4, text="Asset Table")
+    asset_table.create_ui(tab4)
+
+    tab5 = ttk.Frame(notebook)
+    notebook.add(tab5, text="monitoring data")
+    log_viewer.create_ui(tab5)
+
+    root.mainloop()
+
+if __name__ == "__main__":
+    subprocess.Popen([sys.executable, main_path])
+    main()
