@@ -1,0 +1,1322 @@
+2025-09-24 15:37:41,560 [INFO] __main__: Authentication token obtained successfully.
+2025-09-24 15:37:41,570 [INFO] __main__: Starting monitoring tasks...
+2025-09-24 15:37:42 [INFO] CMMS_LOGGER: 2025-09-24 15:37:42 - Executing InfluxDB query without salIndex
+2025-09-24 15:37:43 [INFO] CMMS_LOGGER: 2025-09-24 15:37:43 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:37:37.028545+00:00  2025-09-24T18:37:37.028545Z        26920
+2025-09-24 15:37:43 [INFO] CMMS_LOGGER: 2025-09-24 15:37:43 - type_telemetry: hours measurement
+2025-09-24 15:37:43 [INFO] CMMS_LOGGER: 2025-09-24 15:37:43Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26920
+2025-09-24 15:37:44 [INFO] CMMS_LOGGER: 2025-09-24 15:37:44 - Executing InfluxDB query without salIndex
+2025-09-24 15:37:44 [INFO] CMMS_LOGGER: 2025-09-24 15:37:44 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:37:37.032501+00:00  2025-09-24T18:37:37.032501Z        36462
+2025-09-24 15:37:44 [INFO] CMMS_LOGGER: 2025-09-24 15:37:44 - type_telemetry: hours measurement
+2025-09-24 15:37:44 [INFO] CMMS_LOGGER: 2025-09-24 15:37:44Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:37:45 [INFO] CMMS_LOGGER: 2025-09-24 15:37:45 - [CMMS] Updated NoiseLevel=26920 for asset 423378
+2025-09-24 15:37:45 [INFO] CMMS_LOGGER: 2025-09-24 15:37:45 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:37:45 [INFO] CMMS_LOGGER: 2025-09-24 15:37:45 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:37:45 [INFO] CMMS_LOGGER: 2025-09-24 15:37:45 - Retrieved 2 local system configs.
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425040
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425044
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425032
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425031
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425030
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425070
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425020
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425021
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425011
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425014
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425067
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425028
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425029
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425033
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425034
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425036
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425041
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425039
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425043
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425038
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425035
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425037
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425042
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425017
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425026
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425027
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425053
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425055
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425054
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425060
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425056
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425024
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425023
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425022
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425025
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425052
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425045
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425046
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425047
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425050
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425048
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425049
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425051
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425058
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425057
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425059
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425068
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 752052
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425069
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425066
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425065
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425064
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425063
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425062
+2025-09-24 15:37:45 [WARNING] CMMS_LOGGER: 2025-09-24 15:37:45 - Missing asset for config 425061
+2025-09-24 15:40:38,249 [INFO] __main__: Authentication token obtained successfully.
+2025-09-24 15:40:38,263 [INFO] __main__: Starting monitoring tasks...
+2025-09-24 15:40:38 [INFO] CMMS_LOGGER: 2025-09-24 15:40:38 - Executing InfluxDB query without salIndex
+2025-09-24 15:40:39 [INFO] CMMS_LOGGER: 2025-09-24 15:40:39 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:40:37.047115+00:00  2025-09-24T18:40:37.047115Z        26921
+2025-09-24 15:40:39 [INFO] CMMS_LOGGER: 2025-09-24 15:40:39 - type_telemetry: hours measurement
+2025-09-24 15:40:39 [INFO] CMMS_LOGGER: 2025-09-24 15:40:39Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:40:40 [INFO] CMMS_LOGGER: 2025-09-24 15:40:40 - Executing InfluxDB query without salIndex
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:40:37.053017+00:00  2025-09-24T18:40:37.053017Z        36462
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41 - type_telemetry: hours measurement
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:40:41 [INFO] CMMS_LOGGER: 2025-09-24 15:40:41 - Retrieved 2 local system configs.
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425040
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425044
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425032
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425031
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425030
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425070
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425020
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425021
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425011
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425014
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425067
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425028
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425029
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425033
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425034
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425036
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425041
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425039
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425043
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425038
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425035
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425037
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425042
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425017
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425026
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425027
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425053
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425055
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425054
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425060
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425056
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425024
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425023
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425022
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425025
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425052
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425045
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425046
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425047
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425050
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425048
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425049
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425051
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425058
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425057
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425059
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425068
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 752052
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425069
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425066
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425065
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425064
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425063
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425062
+2025-09-24 15:40:41 [WARNING] CMMS_LOGGER: 2025-09-24 15:40:41 - Missing asset for config 425061
+2025-09-24 15:41:43,815 [INFO] __main__: Authentication token obtained successfully.
+2025-09-24 15:41:43,816 [INFO] __main__: Starting monitoring tasks...
+2025-09-24 15:41:44 [INFO] CMMS_LOGGER: 2025-09-24 15:41:44 - Executing InfluxDB query without salIndex
+2025-09-24 15:41:45 [INFO] CMMS_LOGGER: 2025-09-24 15:41:45 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:41:37.074486+00:00  2025-09-24T18:41:37.074486Z        26921
+2025-09-24 15:41:45 [INFO] CMMS_LOGGER: 2025-09-24 15:41:45 - type_telemetry: hours measurement
+2025-09-24 15:41:45 [INFO] CMMS_LOGGER: 2025-09-24 15:41:45Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:41:46 [INFO] CMMS_LOGGER: 2025-09-24 15:41:46 - Executing InfluxDB query without salIndex
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:41:37.078492+00:00  2025-09-24T18:41:37.078492Z        36462
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47 - type_telemetry: hours measurement
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:41:47 [INFO] CMMS_LOGGER: 2025-09-24 15:41:47 - Retrieved 2 local system configs.
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425040
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425044
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425032
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425031
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425030
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425070
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425020
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425021
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425011
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425014
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425067
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425028
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425029
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425033
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425034
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425036
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425041
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425039
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425043
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425038
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425035
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425037
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425042
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425017
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425026
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425027
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425053
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425055
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425054
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425060
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425056
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425024
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425023
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425022
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425025
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425052
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425045
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425046
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425047
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425050
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425048
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425049
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425051
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425058
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425057
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425059
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425068
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 752052
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425069
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425066
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425065
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425064
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425063
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425062
+2025-09-24 15:41:47 [WARNING] CMMS_LOGGER: 2025-09-24 15:41:47 - Missing asset for config 425061
+2025-09-24 15:42:47 [INFO] CMMS_LOGGER: 2025-09-24 15:42:47 - Executing InfluxDB query without salIndex
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:42:37.077944+00:00  2025-09-24T18:42:37.077944Z        26921
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48 - type_telemetry: hours measurement
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48 - Executing InfluxDB query without salIndex
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:42:47.253253+00:00  2025-09-24T18:42:47.253253Z        36462
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48 - type_telemetry: hours measurement
+2025-09-24 15:42:48 [INFO] CMMS_LOGGER: 2025-09-24 15:42:48Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:42:49 [INFO] CMMS_LOGGER: 2025-09-24 15:42:49 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:42:49 [INFO] CMMS_LOGGER: 2025-09-24 15:42:49 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:42:49 [INFO] CMMS_LOGGER: 2025-09-24 15:42:49 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:42:49 [INFO] CMMS_LOGGER: 2025-09-24 15:42:49 - Retrieved 2 local system configs.
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425040
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425044
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425032
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425031
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425030
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425070
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425020
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425021
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425011
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425014
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425067
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425028
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425029
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425033
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425034
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425036
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425041
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425039
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425043
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425038
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425035
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425037
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425042
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425017
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425026
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425027
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425053
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425055
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425054
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425060
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425056
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425024
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425023
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425022
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425025
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425052
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425045
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425046
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425047
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425050
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425048
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425049
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425051
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425058
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425057
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425059
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425068
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 752052
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425069
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425066
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425065
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425064
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425063
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425062
+2025-09-24 15:42:49 [WARNING] CMMS_LOGGER: 2025-09-24 15:42:49 - Missing asset for config 425061
+2025-09-24 15:43:49 [INFO] CMMS_LOGGER: 2025-09-24 15:43:49 - Executing InfluxDB query without salIndex
+2025-09-24 15:43:49 [INFO] CMMS_LOGGER: 2025-09-24 15:43:49 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:43:47.320829+00:00  2025-09-24T18:43:47.320829Z        26921
+2025-09-24 15:43:49 [INFO] CMMS_LOGGER: 2025-09-24 15:43:49 - type_telemetry: hours measurement
+2025-09-24 15:43:49 [INFO] CMMS_LOGGER: 2025-09-24 15:43:49Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:43:49 [INFO] CMMS_LOGGER: 2025-09-24 15:43:49 - Executing InfluxDB query without salIndex
+2025-09-24 15:43:50 [INFO] CMMS_LOGGER: 2025-09-24 15:43:50 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:43:47.325415+00:00  2025-09-24T18:43:47.325415Z        36462
+2025-09-24 15:43:50 [INFO] CMMS_LOGGER: 2025-09-24 15:43:50 - type_telemetry: hours measurement
+2025-09-24 15:43:50 [INFO] CMMS_LOGGER: 2025-09-24 15:43:50Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:43:50 [INFO] CMMS_LOGGER: 2025-09-24 15:43:50 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:43:50 [INFO] CMMS_LOGGER: 2025-09-24 15:43:50 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:43:51 [INFO] CMMS_LOGGER: 2025-09-24 15:43:51 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:43:51 [INFO] CMMS_LOGGER: 2025-09-24 15:43:51 - Retrieved 2 local system configs.
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425040
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425044
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425032
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425031
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425030
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425070
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425020
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425021
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425011
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425014
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425067
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425028
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425029
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425033
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425034
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425036
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425041
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425039
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425043
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425038
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425035
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425037
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425042
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425017
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425026
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425027
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425053
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425055
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425054
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425060
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425056
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425024
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425023
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425022
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425025
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425052
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425045
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425046
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425047
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425050
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425048
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425049
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425051
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425058
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425057
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425059
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425068
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 752052
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425069
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425066
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425065
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425064
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425063
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425062
+2025-09-24 15:43:51 [WARNING] CMMS_LOGGER: 2025-09-24 15:43:51 - Missing asset for config 425061
+2025-09-24 15:44:50 [INFO] CMMS_LOGGER: 2025-09-24 15:44:50 - Executing InfluxDB query without salIndex
+2025-09-24 15:44:51 [INFO] CMMS_LOGGER: 2025-09-24 15:44:51 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:44:47.320846+00:00  2025-09-24T18:44:47.320846Z        26921
+2025-09-24 15:44:51 [INFO] CMMS_LOGGER: 2025-09-24 15:44:51 - type_telemetry: hours measurement
+2025-09-24 15:44:51 [INFO] CMMS_LOGGER: 2025-09-24 15:44:51Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:44:51 [INFO] CMMS_LOGGER: 2025-09-24 15:44:51 - Executing InfluxDB query without salIndex
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:44:47.324508+00:00  2025-09-24T18:44:47.324508Z        36462
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52 - type_telemetry: hours measurement
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:44:52 [INFO] CMMS_LOGGER: 2025-09-24 15:44:52 - Retrieved 2 local system configs.
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425040
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425044
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425032
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425031
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425030
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425070
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425020
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425021
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425011
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425014
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425067
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425028
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425029
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425033
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425034
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425036
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425041
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425039
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425043
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425038
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425035
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425037
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425042
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425017
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425026
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425027
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425053
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425055
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425054
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425060
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425056
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425024
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425023
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425022
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425025
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425052
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425045
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425046
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425047
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425050
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425048
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425049
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425051
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425058
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425057
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425059
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425068
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 752052
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425069
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425066
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425065
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425064
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425063
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425062
+2025-09-24 15:44:52 [WARNING] CMMS_LOGGER: 2025-09-24 15:44:52 - Missing asset for config 425061
+2025-09-24 15:45:52 [INFO] CMMS_LOGGER: 2025-09-24 15:45:52 - Executing InfluxDB query without salIndex
+2025-09-24 15:45:53 [INFO] CMMS_LOGGER: 2025-09-24 15:45:53 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:45:47.339915+00:00  2025-09-24T18:45:47.339915Z        36462
+2025-09-24 15:45:53 [INFO] CMMS_LOGGER: 2025-09-24 15:45:53 - type_telemetry: hours measurement
+2025-09-24 15:45:53 [INFO] CMMS_LOGGER: 2025-09-24 15:45:53Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:45:53 [INFO] CMMS_LOGGER: 2025-09-24 15:45:53 - Executing InfluxDB query without salIndex
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:45:47.335821+00:00  2025-09-24T18:45:47.335821Z        26921
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54 - type_telemetry: hours measurement
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:45:54 [INFO] CMMS_LOGGER: 2025-09-24 15:45:54 - Retrieved 2 local system configs.
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425040
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425044
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425032
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425031
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425030
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425070
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425020
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425021
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425011
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425014
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425067
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425028
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425029
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425033
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425034
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425036
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425041
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425039
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425043
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425038
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425035
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425037
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425042
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425017
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425026
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425027
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425053
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425055
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425054
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425060
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425056
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425024
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425023
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425022
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425025
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425052
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425045
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425046
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425047
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425050
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425048
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425049
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425051
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425058
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425057
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425059
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425068
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 752052
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425069
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425066
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425065
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425064
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425063
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425062
+2025-09-24 15:45:54 [WARNING] CMMS_LOGGER: 2025-09-24 15:45:54 - Missing asset for config 425061
+2025-09-24 15:46:54 [INFO] CMMS_LOGGER: 2025-09-24 15:46:54 - Executing InfluxDB query without salIndex
+2025-09-24 15:46:55 [INFO] CMMS_LOGGER: 2025-09-24 15:46:55 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:46:47.339499+00:00  2025-09-24T18:46:47.339499Z        26921
+2025-09-24 15:46:55 [INFO] CMMS_LOGGER: 2025-09-24 15:46:55 - type_telemetry: hours measurement
+2025-09-24 15:46:55 [INFO] CMMS_LOGGER: 2025-09-24 15:46:55Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:46:55 [INFO] CMMS_LOGGER: 2025-09-24 15:46:55 - Executing InfluxDB query without salIndex
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:46:47.343155+00:00  2025-09-24T18:46:47.343155Z        36462
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56 - type_telemetry: hours measurement
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:46:56 [INFO] CMMS_LOGGER: 2025-09-24 15:46:56 - Retrieved 2 local system configs.
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425040
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425044
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425032
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425031
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425030
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425070
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425020
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425021
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425011
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425014
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425067
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425028
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425029
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425033
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425034
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425036
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425041
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425039
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425043
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425038
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425035
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425037
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425042
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425017
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425026
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425027
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425053
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425055
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425054
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425060
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425056
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425024
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425023
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425022
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425025
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425052
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425045
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425046
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425047
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425050
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425048
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425049
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425051
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425058
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425057
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425059
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425068
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 752052
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425069
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425066
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425065
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425064
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425063
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425062
+2025-09-24 15:46:56 [WARNING] CMMS_LOGGER: 2025-09-24 15:46:56 - Missing asset for config 425061
+2025-09-24 15:47:56 [INFO] CMMS_LOGGER: 2025-09-24 15:47:56 - Executing InfluxDB query without salIndex
+2025-09-24 15:47:57 [INFO] CMMS_LOGGER: 2025-09-24 15:47:57 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:47:47.328254+00:00  2025-09-24T18:47:47.328254Z        26921
+2025-09-24 15:47:57 [INFO] CMMS_LOGGER: 2025-09-24 15:47:57 - type_telemetry: hours measurement
+2025-09-24 15:47:57 [INFO] CMMS_LOGGER: 2025-09-24 15:47:57Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:47:57 [INFO] CMMS_LOGGER: 2025-09-24 15:47:57 - Executing InfluxDB query without salIndex
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:47:57.502415+00:00  2025-09-24T18:47:57.502415Z        36462
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58 - type_telemetry: hours measurement
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:47:58 [INFO] CMMS_LOGGER: 2025-09-24 15:47:58 - Retrieved 2 local system configs.
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425040
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425044
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425032
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425031
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425030
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425070
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425020
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425021
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425011
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425014
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425067
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425028
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425029
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425033
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425034
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425036
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425041
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425039
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425043
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425038
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425035
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425037
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425042
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425017
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425026
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425027
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425053
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425055
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425054
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425060
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425056
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425024
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425023
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425022
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425025
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425052
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425045
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425046
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425047
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425050
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425048
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425049
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425051
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425058
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425057
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425059
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425068
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 752052
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425069
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425066
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425065
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425064
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425063
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425062
+2025-09-24 15:47:58 [WARNING] CMMS_LOGGER: 2025-09-24 15:47:58 - Missing asset for config 425061
+2025-09-24 15:48:58 [INFO] CMMS_LOGGER: 2025-09-24 15:48:58 - Executing InfluxDB query without salIndex
+2025-09-24 15:48:59 [INFO] CMMS_LOGGER: 2025-09-24 15:48:59 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:48:57.492735+00:00  2025-09-24T18:48:57.492735Z        26921
+2025-09-24 15:48:59 [INFO] CMMS_LOGGER: 2025-09-24 15:48:59 - type_telemetry: hours measurement
+2025-09-24 15:48:59 [INFO] CMMS_LOGGER: 2025-09-24 15:48:59Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:48:59 [INFO] CMMS_LOGGER: 2025-09-24 15:48:59 - Executing InfluxDB query without salIndex
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00 - InfluxDB query result:
+                                                        time  hourMeasure
+time                                                                     
+2025-09-24 18:48:57.496570+00:00  2025-09-24T18:48:57.49657Z        36462
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00 - type_telemetry: hours measurement
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:49:00 [INFO] CMMS_LOGGER: 2025-09-24 15:49:00 - Retrieved 2 local system configs.
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425040
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425044
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425032
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425031
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425030
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425070
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425020
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425021
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425011
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425014
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425067
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425028
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425029
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425033
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425034
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425036
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425041
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425039
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425043
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425038
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425035
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425037
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425042
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425017
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425026
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425027
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425053
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425055
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425054
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425060
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425056
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425024
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425023
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425022
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425025
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425052
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425045
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425046
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425047
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425050
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425048
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425049
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425051
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425058
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425057
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425059
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425068
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 752052
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425069
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425066
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425065
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425064
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425063
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425062
+2025-09-24 15:49:00 [WARNING] CMMS_LOGGER: 2025-09-24 15:49:00 - Missing asset for config 425061
+2025-09-24 15:50:00 [INFO] CMMS_LOGGER: 2025-09-24 15:50:00 - Executing InfluxDB query without salIndex
+2025-09-24 15:50:01 [INFO] CMMS_LOGGER: 2025-09-24 15:50:01 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:49:57.506203+00:00  2025-09-24T18:49:57.506203Z        26921
+2025-09-24 15:50:01 [INFO] CMMS_LOGGER: 2025-09-24 15:50:01 - type_telemetry: hours measurement
+2025-09-24 15:50:01 [INFO] CMMS_LOGGER: 2025-09-24 15:50:01Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:50:01 [INFO] CMMS_LOGGER: 2025-09-24 15:50:01 - Executing InfluxDB query without salIndex
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:49:57.511452+00:00  2025-09-24T18:49:57.511452Z        36462
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02 - type_telemetry: hours measurement
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:50:02 [INFO] CMMS_LOGGER: 2025-09-24 15:50:02 - Retrieved 2 local system configs.
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425040
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425044
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425032
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425031
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425030
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425070
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425020
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425021
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425011
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425014
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425067
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425028
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425029
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425033
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425034
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425036
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425041
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425039
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425043
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425038
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425035
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425037
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425042
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425017
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425026
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425027
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425053
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425055
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425054
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425060
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425056
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425024
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425023
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425022
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425025
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425052
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425045
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425046
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425047
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425050
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425048
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425049
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425051
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425058
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425057
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425059
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425068
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 752052
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425069
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425066
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425065
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425064
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425063
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425062
+2025-09-24 15:50:02 [WARNING] CMMS_LOGGER: 2025-09-24 15:50:02 - Missing asset for config 425061
+2025-09-24 15:51:02 [INFO] CMMS_LOGGER: 2025-09-24 15:51:02 - Executing InfluxDB query without salIndex
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:50:57.531383+00:00  2025-09-24T18:50:57.531383Z        26921
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - type_telemetry: hours measurement
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - Executing InfluxDB query without salIndex
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:50:57.537442+00:00  2025-09-24T18:50:57.537442Z        36462
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - type_telemetry: hours measurement
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:51:03 [INFO] CMMS_LOGGER: 2025-09-24 15:51:03 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:51:04 [INFO] CMMS_LOGGER: 2025-09-24 15:51:04 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:51:04 [INFO] CMMS_LOGGER: 2025-09-24 15:51:04 - Retrieved 2 local system configs.
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425040
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425044
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425032
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425031
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425030
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425070
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425020
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425021
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425011
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425014
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425067
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425028
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425029
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425033
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425034
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425036
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425041
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425039
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425043
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425038
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425035
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425037
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425042
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425017
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425026
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425027
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425053
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425055
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425054
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425060
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425056
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425024
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425023
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425022
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425025
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425052
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425045
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425046
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425047
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425050
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425048
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425049
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425051
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425058
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425057
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425059
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425068
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 752052
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425069
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425066
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425065
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425064
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425063
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425062
+2025-09-24 15:51:04 [WARNING] CMMS_LOGGER: 2025-09-24 15:51:04 - Missing asset for config 425061
+2025-09-24 15:52:03 [INFO] CMMS_LOGGER: 2025-09-24 15:52:03 - Executing InfluxDB query without salIndex
+2025-09-24 15:52:04 [INFO] CMMS_LOGGER: 2025-09-24 15:52:04 - InfluxDB query result:
+                                                       time  hourMeasure
+time                                                                    
+2025-09-24 18:51:57.543400+00:00  2025-09-24T18:51:57.5434Z        36462
+2025-09-24 15:52:04 [INFO] CMMS_LOGGER: 2025-09-24 15:52:04 - type_telemetry: hours measurement
+2025-09-24 15:52:04 [INFO] CMMS_LOGGER: 2025-09-24 15:52:04Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:52:04 [INFO] CMMS_LOGGER: 2025-09-24 15:52:04 - Executing InfluxDB query without salIndex
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:51:57.539122+00:00  2025-09-24T18:51:57.539122Z        26921
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05 - type_telemetry: hours measurement
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:52:05 [INFO] CMMS_LOGGER: 2025-09-24 15:52:05 - Retrieved 2 local system configs.
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425040
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425044
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425032
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425031
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425030
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425070
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425020
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425021
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425011
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425014
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425067
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425028
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425029
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425033
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425034
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425036
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425041
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425039
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425043
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425038
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425035
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425037
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425042
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425017
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425026
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425027
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425053
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425055
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425054
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425060
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425056
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425024
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425023
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425022
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425025
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425052
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425045
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425046
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425047
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425050
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425048
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425049
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425051
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425058
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425057
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425059
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425068
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 752052
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425069
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425066
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425065
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425064
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425063
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425062
+2025-09-24 15:52:05 [WARNING] CMMS_LOGGER: 2025-09-24 15:52:05 - Missing asset for config 425061
+2025-09-24 15:53:05 [INFO] CMMS_LOGGER: 2025-09-24 15:53:05 - Executing InfluxDB query without salIndex
+2025-09-24 15:53:06 [INFO] CMMS_LOGGER: 2025-09-24 15:53:06 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:52:57.538052+00:00  2025-09-24T18:52:57.538052Z        26921
+2025-09-24 15:53:06 [INFO] CMMS_LOGGER: 2025-09-24 15:53:06 - type_telemetry: hours measurement
+2025-09-24 15:53:06 [INFO] CMMS_LOGGER: 2025-09-24 15:53:06Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 15:53:06 [INFO] CMMS_LOGGER: 2025-09-24 15:53:06 - Executing InfluxDB query without salIndex
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 18:52:57.542504+00:00  2025-09-24T18:52:57.542504Z        36462
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07 - type_telemetry: hours measurement
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 15:53:07 [INFO] CMMS_LOGGER: 2025-09-24 15:53:07 - Retrieved 2 local system configs.
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425040
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425044
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425032
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425031
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425030
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425070
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425020
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425021
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425011
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425014
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425067
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425028
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425029
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425033
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425034
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425036
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425041
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425039
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425043
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425038
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425035
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425037
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425042
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425017
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425026
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425027
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425053
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425055
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425054
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425060
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425056
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425024
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425023
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425022
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425025
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425052
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425045
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425046
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425047
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425050
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425048
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425049
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425051
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425058
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425057
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425059
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425068
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 752052
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425069
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425066
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425065
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425064
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425063
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425062
+2025-09-24 15:53:07 [WARNING] CMMS_LOGGER: 2025-09-24 15:53:07 - Missing asset for config 425061
+2025-09-24 16:07:55,145 [INFO] __main__: Authentication token obtained successfully.
+2025-09-24 16:07:55,147 [INFO] __main__: Starting monitoring tasks...
+2025-09-24 16:07:55 [INFO] CMMS_LOGGER: 2025-09-24 16:07:55 - Executing InfluxDB query without salIndex
+2025-09-24 16:07:56 [INFO] CMMS_LOGGER: 2025-09-24 16:07:56 - InfluxDB query result:
+                                                        time  hourMeasure
+time                                                                     
+2025-09-24 19:07:47.473650+00:00  2025-09-24T19:07:47.47365Z        26921
+2025-09-24 16:07:56 [INFO] CMMS_LOGGER: 2025-09-24 16:07:56 - type_telemetry: hours measurement
+2025-09-24 16:07:56 [INFO] CMMS_LOGGER: 2025-09-24 16:07:56Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 16:07:57 [INFO] CMMS_LOGGER: 2025-09-24 16:07:57 - Executing InfluxDB query without salIndex
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 19:07:57.645965+00:00  2025-09-24T19:07:57.645965Z        36462
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58 - type_telemetry: hours measurement
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 16:07:58 [INFO] CMMS_LOGGER: 2025-09-24 16:07:58 - Retrieved 2 local system configs.
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425040
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425044
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425032
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425031
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425030
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425070
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425020
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425021
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425011
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425014
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425067
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425028
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425029
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425033
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425034
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425036
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425041
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425039
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425043
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425038
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425035
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425037
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425042
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425017
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425026
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425027
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425053
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425055
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425054
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425060
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425056
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425024
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425023
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425022
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425025
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425052
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425045
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425046
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425047
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425050
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425048
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425049
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425051
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425058
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425057
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425059
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425068
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 752052
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425069
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425066
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425065
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425064
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425063
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425062
+2025-09-24 16:07:58 [WARNING] CMMS_LOGGER: 2025-09-24 16:07:58 - Missing asset for config 425061
+2025-09-24 16:08:58 [INFO] CMMS_LOGGER: 2025-09-24 16:08:58 - Executing InfluxDB query without salIndex
+2025-09-24 16:08:59 [INFO] CMMS_LOGGER: 2025-09-24 16:08:59 - InfluxDB query result:
+                                                        time  hourMeasure
+time                                                                     
+2025-09-24 19:08:57.647740+00:00  2025-09-24T19:08:57.64774Z        26921
+2025-09-24 16:08:59 [INFO] CMMS_LOGGER: 2025-09-24 16:08:59 - type_telemetry: hours measurement
+2025-09-24 16:08:59 [INFO] CMMS_LOGGER: 2025-09-24 16:08:59Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 16:08:59 [INFO] CMMS_LOGGER: 2025-09-24 16:08:59 - Executing InfluxDB query without salIndex
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 19:08:57.651902+00:00  2025-09-24T19:08:57.651902Z        36462
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00 - type_telemetry: hours measurement
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 16:09:00 [INFO] CMMS_LOGGER: 2025-09-24 16:09:00 - Retrieved 2 local system configs.
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425040
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425044
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425032
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425031
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425030
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425070
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425020
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425021
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425011
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425014
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425067
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425028
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425029
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425033
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425034
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425036
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425041
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425039
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425043
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425038
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425035
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425037
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425042
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425017
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425026
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425027
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425053
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425055
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425054
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425060
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425056
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425024
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425023
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425022
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425025
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425052
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425045
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425046
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425047
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425050
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425048
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425049
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425051
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425058
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425057
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425059
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425068
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 752052
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425069
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425066
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425065
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425064
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425063
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425062
+2025-09-24 16:09:00 [WARNING] CMMS_LOGGER: 2025-09-24 16:09:00 - Missing asset for config 425061
+2025-09-24 16:10:00 [INFO] CMMS_LOGGER: 2025-09-24 16:10:00 - Executing InfluxDB query without salIndex
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 19:09:57.651692+00:00  2025-09-24T19:09:57.651692Z        36462
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01 - type_telemetry: hours measurement
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01 - Executing InfluxDB query without salIndex
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 19:09:57.646634+00:00  2025-09-24T19:09:57.646634Z        26921
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01 - type_telemetry: hours measurement
+2025-09-24 16:10:01 [INFO] CMMS_LOGGER: 2025-09-24 16:10:01Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 16:10:02 [INFO] CMMS_LOGGER: 2025-09-24 16:10:02 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 16:10:02 [INFO] CMMS_LOGGER: 2025-09-24 16:10:02 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 16:10:02 [INFO] CMMS_LOGGER: 2025-09-24 16:10:02 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 16:10:02 [INFO] CMMS_LOGGER: 2025-09-24 16:10:02 - Retrieved 2 local system configs.
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425040
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425044
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425032
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425031
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425030
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425070
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425020
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425021
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425011
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425014
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425067
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425028
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425029
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425033
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425034
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425036
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425041
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425039
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425043
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425038
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425035
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425037
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425042
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425017
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425026
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425027
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425053
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425055
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425054
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425060
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425056
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425024
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425023
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425022
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425025
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425052
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425045
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425046
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425047
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425050
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425048
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425049
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425051
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425058
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425057
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425059
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425068
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 752052
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425069
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425066
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425065
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425064
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425063
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425062
+2025-09-24 16:10:02 [WARNING] CMMS_LOGGER: 2025-09-24 16:10:02 - Missing asset for config 425061
+2025-09-24 16:11:02 [INFO] CMMS_LOGGER: 2025-09-24 16:11:02 - Executing InfluxDB query without salIndex
+2025-09-24 16:11:02 [INFO] CMMS_LOGGER: 2025-09-24 16:11:02 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 19:10:57.666254+00:00  2025-09-24T19:10:57.666254Z        36462
+2025-09-24 16:11:02 [INFO] CMMS_LOGGER: 2025-09-24 16:11:02 - type_telemetry: hours measurement
+2025-09-24 16:11:02 [INFO] CMMS_LOGGER: 2025-09-24 16:11:02Retrieved valueHVAC crac 2 LV 2.lsst.sal.HVAC.crac02P02.hourMeasure=36462
+2025-09-24 16:11:02 [INFO] CMMS_LOGGER: 2025-09-24 16:11:02 - Executing InfluxDB query without salIndex
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03 - InfluxDB query result:
+                                                         time  hourMeasure
+time                                                                      
+2025-09-24 19:10:57.662021+00:00  2025-09-24T19:10:57.662021Z        26921
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03 - type_telemetry: hours measurement
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03Retrieved valueHVAC crac 1 LV 2.lsst.sal.HVAC.crac01P02.hourMeasure=26921
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03 - [CMMS] Updated NoiseLevel=26921 for asset 423378
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03 - [CMMS] Updated NoiseLevel=36462 for asset 423369
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03 - Retrieved 55 preventive maintenance configs from CMMS.
+2025-09-24 16:11:03 [INFO] CMMS_LOGGER: 2025-09-24 16:11:03 - Retrieved 2 local system configs.
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425040
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425044
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425032
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425031
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425030
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425070
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425020
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425021
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425011
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425014
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425067
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425028
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425029
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425033
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425034
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425036
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425041
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425039
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425043
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425038
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425035
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425037
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425042
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425017
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425026
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425027
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425053
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425055
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425054
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425060
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425056
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425024
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425023
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425022
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425025
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425052
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425045
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425046
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425047
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425050
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425048
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425049
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425051
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425058
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425057
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425059
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425068
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 752052
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425069
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425066
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425065
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425064
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425063
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425062
+2025-09-24 16:11:03 [WARNING] CMMS_LOGGER: 2025-09-24 16:11:03 - Missing asset for config 425061
