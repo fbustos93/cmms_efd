@@ -36,6 +36,11 @@ CHILE_TZ = pytz.timezone("America/Santiago")
 DB_PATH = "intDB.db"
 
 
+def _console(msg: str) -> None:
+    """Mirror logs to stdout for visibility when executed inside Jupyter notebooks."""
+    print(msg)
+
+
 def get_shutter_activations(
     site: str,
     db_name: str,
@@ -43,24 +48,25 @@ def get_shutter_activations(
     time_interval: str = "24h",
 ) -> int:
     """
-    Count the number of shutter activation events based on actuator position telemetry.
-    An activation is defined as a transition from <=90% to >90%.
+    Count the number of shutter activation events.
+
+    An activation is defined as a transition from <= 90% to > 90% in either actuator.
 
     Parameters
     ----------
     site : str
-        EFD site reference label.
+        EFD site reference.
     db_name : str
-        Name of the InfluxDB data source.
+        InfluxDB database name.
     measurement : str
-        Measurement table in the EFD.
+        Measurement table name in InfluxDB.
     time_interval : str, default "24h"
-        Lookback interval for event detection.
+        Lookback interval.
 
     Returns
     -------
     int
-        Count of shutter activation events detected.
+        Number of detected activations.
     """
     try:
         client = EfdQueryClient(site=site, db_name=db_name)
@@ -74,6 +80,7 @@ def get_shutter_activations(
 
         result: pd.DataFrame = client.query(query)
         if result.empty:
+            _console("[SHUTTER] No telemetry data available")
             return 0
 
         active = (result["positionActual0"] > 90) | (result["positionActual1"] > 90)
@@ -81,26 +88,29 @@ def get_shutter_activations(
         count = int(activations.sum())
 
         logger.debug(f"{LOG_TIME_FORMAT()} Shutter activations detected: {count}")
+        _console(f"[SHUTTER] Activations detected: {count}")
+
         return count
 
     except Exception as exc:
         logger.error(f"{LOG_TIME_FORMAT()} Failed to evaluate shutter activations: {exc}")
+        _console(f"[SHUTTER ERROR] {exc}")
         return 0
 
 
 def load_last_activation(asset_id: str) -> Tuple[int, Optional[datetime]]:
     """
-    Retrieve the most recently stored shutter activation count and timestamp.
+    Load the last stored activation count for an asset.
 
     Parameters
     ----------
     asset_id : str
-        Asset reference identifier.
+        Asset reference.
 
     Returns
     -------
     (int, datetime or None)
-        Last stored activation count and timestamp.
+        Last activation count and timestamp.
     """
     try:
         conn = sqlite3.connect(DB_PATH)
@@ -122,19 +132,20 @@ def load_last_activation(asset_id: str) -> Tuple[int, Optional[datetime]]:
 
     except Exception as exc:
         logger.error(f"{LOG_TIME_FORMAT()} Failed to load shutter activation state: {exc}")
+        _console(f"[SHUTTER LOAD ERROR] {exc}")
         return 0, None
 
 
 def save_last_activation(asset_id: str, count: int) -> None:
     """
-    Store the shutter activation count and timestamp for the given asset.
+    Save the current shutter activation state.
 
     Parameters
     ----------
     asset_id : str
-        Asset reference identifier.
+        Asset reference.
     count : int
-        Activation count to store.
+        Count to store.
     """
     try:
         conn = sqlite3.connect(DB_PATH)
@@ -156,27 +167,29 @@ def save_last_activation(asset_id: str, count: int) -> None:
         conn.commit()
         conn.close()
 
-        logger.debug(f"{LOG_TIME_FORMAT()} Saved shutter activation state for asset {asset_id}: {count}")
+        logger.debug(f"{LOG_TIME_FORMAT()} Saved shutter activation for asset {asset_id}: {count}")
+        _console(f"[SHUTTER SAVE] asset={asset_id}, count={count}")
 
     except Exception as exc:
         logger.error(f"{LOG_TIME_FORMAT()} Failed to store shutter activation state: {exc}")
+        _console(f"[SHUTTER SAVE ERROR] {exc}")
 
 
 def should_update(asset_id: str, hours: int = 24) -> bool:
     """
-    Determine whether enough time has elapsed to perform another shutter update.
+    Determine whether enough time has passed to update the shutter activation count.
 
     Parameters
     ----------
     asset_id : str
-        Asset reference identifier.
+        Asset reference.
     hours : int, default 24
-        Required elapsed hours threshold.
+        Minimum required hours.
 
     Returns
     -------
     bool
-        True if the update should run, otherwise False.
+        True if update should run, False otherwise.
     """
     _, last_update = load_last_activation(asset_id)
     if not last_update:

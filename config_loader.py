@@ -19,83 +19,91 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from __future__ import annotations
+
 import sqlite3
 from datetime import datetime, timedelta
 import pytz
 import logging
 import os
+from typing import Any, Iterable, Optional
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 DB_PATH = os.path.join(BASE_DIR, "intDB.db")
-
 CHILE_TZ = pytz.timezone("America/Santiago")
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 if not logger.hasHandlers():
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
-    formatter = logging.Formatter("[%(levelname)s] %(message)s")
-    ch.setFormatter(formatter)
-    logger.addHandler(ch)
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.DEBUG)
+    handler.setFormatter(logging.Formatter("[%(levelname)s] %(message)s"))
+    logger.addHandler(handler)
 
-# CONFIGURATION TABLE FUNCTIONS (config_interval)
+def _execute_query(query: str, params: Iterable[Any] | None = None,
+                   db_path: str = DB_PATH) -> None:
+    """Execute a write query (INSERT, UPDATE, DELETE)."""
+    params = params or ()
+    try:
+        with sqlite3.connect(db_path) as conn:
+            conn.execute(query, params)
+            conn.commit()
+    except Exception as exc:
+        logger.error(f"DB write failed: {exc}")
+
+
+def _execute_fetch(query: str, params: Iterable[Any] | None = None,
+                   db_path: str = DB_PATH) -> list[tuple]:
+    """Execute a SELECT query and return all rows."""
+    params = params or ()
+    try:
+        with sqlite3.connect(db_path) as conn:
+            cur = conn.execute(query, params)
+            return cur.fetchall()
+    except Exception as exc:
+        logger.error(f"DB fetch failed: {exc}")
+        return []
+
 def read_config_from_db(db_path: str = DB_PATH) -> list[dict]:
-    """Read all configuration records from the `config_interval` table.
-
-    Parameters
-    ----------
-    db_path : `str`, optional
-        Path to the SQLite database file.
+    """
+    Read all configuration entries from `config_interval`.
 
     Returns
     -------
     list of dict
-        A list of configuration records, including the `id` field.
+        Each dictionary contains the configuration fields.
     """
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute(
+    rows = _execute_fetch(
         """
         SELECT id, name, measurement, field, asset_id, attribute,
                db_name, time_interval, salIndex, type_telemetry
         FROM config_interval
-        """
+        """,
+        db_path=db_path,
     )
-    rows = cursor.fetchall()
-    conn.close()
 
-    configs = [
+    return [
         {
-            "id": row[0],
-            "name": row[1],
-            "measurement": row[2],
-            "field": row[3],
-            "asset_id": row[4],
-            "attribute": row[5],
-            "db_name": row[6],
-            "time_interval": row[7],
-            "salIndex": row[8],
-            "type_telemetry": row[9],
+            "id": r[0],
+            "name": r[1],
+            "measurement": r[2],
+            "field": r[3],
+            "asset_id": r[4],
+            "attribute": r[5],
+            "db_name": r[6],
+            "time_interval": r[7],
+            "salIndex": r[8],
+            "type_telemetry": r[9],
         }
-        for row in rows
+        for r in rows
     ]
-    return configs
 
 
 def insert_config(entry: dict, db_path: str = DB_PATH) -> None:
-    """Insert a new configuration record into `config_interval`.
-
-    Parameters
-    ----------
-    entry : `dict`
-        Configuration data to insert.
-    db_path : `str`, optional
-        Path to the SQLite database file.
     """
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute(
+    Insert a new configuration entry into `config_interval`.
+    """
+    _execute_query(
         """
         INSERT INTO config_interval
         (name, measurement, field, asset_id, attribute, db_name,
@@ -113,40 +121,23 @@ def insert_config(entry: dict, db_path: str = DB_PATH) -> None:
             entry.get("salIndex"),
             entry.get("type_telemetry"),
         ),
+        db_path=db_path,
     )
-    conn.commit()
-    conn.close()
-    logger.debug(f"Inserted new configuration: {entry['name']}")
+    logger.debug(f"Inserted config: {entry['name']}")
 
 
 def update_config(entry: dict, db_path: str = DB_PATH) -> None:
-    """Update an existing configuration record in `config_interval`.
-
-    Parameters
-    ----------
-    entry : `dict`
-        Configuration data containing the updated fields.
-        Must include the key `id`.
-    db_path : `str`, optional
-        Path to the SQLite database file.
+    """
+    Update an existing configuration entry.
     """
     if "id" not in entry:
-        raise ValueError("Missing 'id' key for configuration update.")
+        raise ValueError("Configuration update requires 'id' field.")
 
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute(
+    _execute_query(
         """
         UPDATE config_interval
-        SET name = ?,
-            measurement = ?,
-            field = ?,
-            asset_id = ?,
-            attribute = ?,
-            db_name = ?,
-            time_interval = ?,
-            salIndex = ?,
-            type_telemetry = ?
+        SET name = ?, measurement = ?, field = ?, asset_id = ?, attribute = ?,
+            db_name = ?, time_interval = ?, salIndex = ?, type_telemetry = ?
         WHERE id = ?
         """,
         (
@@ -161,231 +152,214 @@ def update_config(entry: dict, db_path: str = DB_PATH) -> None:
             entry.get("type_telemetry"),
             entry["id"],
         ),
+        db_path=db_path,
     )
-    conn.commit()
-    conn.close()
-    logger.debug(f"Updated configuration ID {entry['id']} ({entry['name']})")
+    logger.debug(f"Updated configuration: {entry['id']}")
 
-# SHUTTER FUNCTIONS
 def has_24h_passed_since_last_run(db_path: str = DB_PATH) -> bool:
-    """Check if 24 hours have passed since the last recorded run.
-
-    Parameters
-    ----------
-    db_path : `str`, optional
-        Path to the SQLite database file.
-
-    Returns
-    -------
-    bool
-        True if 24 hours have passed, False otherwise.
     """
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute("SELECT last_run FROM shutter_schedule WHERE id = 1")
-    row = cursor.fetchone()
-    conn.close()
+    Determine whether 24 hours have elapsed since the last run.
+    """
+    rows = _execute_fetch(
+        """SELECT last_run FROM shutter_schedule WHERE id = 1""",
+        db_path=db_path,
+    )
 
-    if not row:
+    if not rows:
         return True
 
     try:
-        last_run = datetime.strptime(row[0], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=CHILE_TZ)
+        last_run = datetime.strptime(rows[0][0], "%Y-%m-%dT%H:%M:%S")
+        last_run = CHILE_TZ.localize(last_run)
         now = datetime.now(CHILE_TZ)
         return (now - last_run) >= timedelta(hours=24)
-    except Exception as err:
-        logger.error(f"Failed to parse last_run timestamp: {err}")
+    except Exception:
         return True
 
 
-def save_shutter_activation_to_db(db_path: str, asset_id: str, num_activations: int) -> None:
-    """Save a shutter activation record in the database.
-
-    Parameters
-    ----------
-    db_path : `str`
-        Path to the SQLite database file.
-    asset_id : `str`
-        Asset identifier.
-    num_activations : `int`
-        Number of activations to record.
+def save_shutter_activation_to_db(db_path: str, asset_id: str,
+                                  num_activations: int) -> None:
     """
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    current_time = datetime.now(CHILE_TZ).strftime("%Y-%m-%dT%H:%M:%S")
-    cursor.execute(
+    Record shutter activation count.
+    """
+    timestamp = datetime.now(CHILE_TZ).strftime("%Y-%m-%dT%H:%M:%S")
+    _execute_query(
         """
         INSERT INTO shutter_activations (asset_id, last_update, last_activations)
         VALUES (?, ?, ?)
         """,
-        (asset_id, current_time, num_activations),
+        (asset_id, timestamp, num_activations),
+        db_path=db_path,
     )
-    conn.commit()
-    conn.close()
-    logger.debug(f"Saved shutter activation for asset {asset_id}: {num_activations}")
 
 
 def update_last_run_timestamp(db_path: str = DB_PATH) -> None:
-    """Update the last run timestamp to the current time in `shutter_schedule`.
-
-    Parameters
-    ----------
-    db_path : `str`, optional
-        Path to the SQLite database file.
+    """
+    Update shutter last-run timestamp.
     """
     now = datetime.now(CHILE_TZ).strftime("%Y-%m-%dT%H:%M:%S")
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute(
+    _execute_query(
         """
         INSERT INTO shutter_schedule (id, last_run)
         VALUES (1, ?)
-        ON CONFLICT(id) DO UPDATE SET last_run=excluded.last_run
+        ON CONFLICT(id)
+        DO UPDATE SET last_run=excluded.last_run
         """,
         (now,),
+        db_path=db_path,
     )
-    conn.commit()
-    conn.close()
-    logger.debug("Updated last run timestamp in shutter_schedule")
 
 
-def get_last_run_timestamp(db_path: str = DB_PATH) -> datetime | None:
-    """Retrieve the last run timestamp from `shutter_schedule`.
-
-    Parameters
-    ----------
-    db_path : `str`, optional
-        Path to the SQLite database file.
-
-    Returns
-    -------
-    datetime or None
-        Timezone-aware timestamp of the last run, or None if unavailable.
+def get_last_run_timestamp(db_path: str = DB_PATH) -> Optional[datetime]:
     """
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute("SELECT last_run FROM shutter_schedule WHERE id = 1")
-    row = cursor.fetchone()
-    conn.close()
+    Retrieve the last shutter run timestamp.
+    """
+    rows = _execute_fetch(
+        "SELECT last_run FROM shutter_schedule WHERE id = 1",
+        db_path=db_path,
+    )
 
-    if row and row[0]:
+    if rows and rows[0][0]:
         try:
-            naive_dt = datetime.strptime(row[0], "%Y-%m-%dT%H:%M:%S")
+            naive_dt = datetime.strptime(rows[0][0], "%Y-%m-%dT%H:%M:%S")
             return CHILE_TZ.localize(naive_dt)
-        except Exception as err:
-            logger.error(f"Could not parse last_run timestamp: {err}")
+        except Exception:
+            return None
+
     return None
 
-# EFD HISTORY AND TRIGGERS
 def save_efd_history(timestamp: str, measurement: str, field: str,
-                     value: float, asset_id: str, db_path: str = DB_PATH) -> None:
-    """Save a telemetry history record if not a duplicate.
-
-    Parameters
-    ----------
-    timestamp : `str`
-        Timestamp of the measurement.
-    measurement : `str`
-        Measurement name from EFD.
-    field : `str`
-        Field name.
-    value : `float`
-        Measured value.
-    asset_id : `str`
-        Asset identifier.
-    db_path : `str`, optional
-        Path to the SQLite database file.
+                     value: float, asset_id: str,
+                     db_path: str = DB_PATH) -> None:
     """
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute(
+    Save EFD data into history (skips duplicates).
+    """
+    exists = _execute_fetch(
         """
         SELECT 1 FROM efd_history
         WHERE timestamp = ? AND measurement = ? AND field = ? AND value = ?
         """,
         (timestamp, measurement, field, value),
+        db_path=db_path,
     )
-    exists = cursor.fetchone()
 
-    if not exists:
-        cursor.execute(
-            """
-            INSERT INTO efd_history (timestamp, measurement, field, value, asset_id)
-            VALUES (?, ?, ?, ?, ?)
-            """,
-            (timestamp, measurement, field, value, asset_id),
+    if exists:
+        return
+
+    _execute_query(
+        """
+        INSERT INTO efd_history (timestamp, measurement, field, value, asset_id)
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        (timestamp, measurement, field, value, asset_id),
+        db_path=db_path,
+    )
+
+def save_trigger_event(config_id: str, frequency: int, frequency_um: str,
+                       db_path: str = DB_PATH) -> None:
+    """
+    Save or update trigger events in `trigger_log`.
+    """
+    ts = datetime.now().isoformat()
+    _execute_query(
+        """
+        INSERT INTO trigger_log (config_id, last_trigger_time, frequency, frequencyUM)
+        VALUES (?, ?, ?, ?)
+        ON CONFLICT(config_id)
+        DO UPDATE SET
+            last_trigger_time = excluded.last_trigger_time,
+            frequency = excluded.frequency,
+            frequencyUM = excluded.frequencyUM
+        """,
+        (config_id, ts, frequency, frequency_um),
+        db_path=db_path,
+    )
+
+
+def get_last_trigger_info(config_id: str, db_path: str = DB_PATH
+                          ) -> tuple[Optional[datetime], Optional[int], Optional[str]]:
+    """
+    Retrieve trigger log metadata.
+    """
+    rows = _execute_fetch(
+        """
+        SELECT last_trigger_time, frequency, frequencyUM
+        FROM trigger_log
+        WHERE config_id = ?
+        """,
+        (config_id,),
+        db_path=db_path,
+    )
+
+    if not rows:
+        return None, None, None
+
+    ts, freq, freq_um = rows[0]
+
+    try:
+        ts = datetime.fromisoformat(ts)
+    except Exception:
+        ts = None
+
+    return ts, freq, freq_um
+
+def init_ml_storage(db_path: str = DB_PATH) -> None:
+    """
+    Create ML model table if it does not exist.
+    """
+    _execute_query(
+        """
+        CREATE TABLE IF NOT EXISTS ml_models (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            measurement TEXT NOT NULL,
+            field TEXT NOT NULL,
+            slope REAL NOT NULL,
+            intercept REAL NOT NULL,
+            trained_at TEXT NOT NULL
         )
-        logger.debug(f"Inserted EFD history: {measurement}.{field}={value} @ {timestamp}")
-    else:
-        logger.debug(f"Duplicate EFD entry skipped: {measurement}.{field} @ {timestamp}")
-
-    conn.commit()
-    conn.close()
+        """,
+        db_path=db_path,
+    )
 
 
-def save_trigger_event(config_id: str, frequency: int, frequency_um: str, db_path: str = "intDB.db") -> None:
-    """Save or update a trigger event in the `trigger_log` table.
-
-    Parameters
-    ----------
-    config_id : `str`
-        Identifier of the configuration that triggered the event.
-    frequency : `int`
-        Frequency of the trigger.
-    frequency_um : `str`
-        Unit of measurement for frequency.
-    db_path : `str`, optional
-        Path to the SQLite database file.
+def save_ml_linear_model(measurement: str, field: str,
+                         slope: float, intercept: float,
+                         db_path: str = DB_PATH) -> None:
     """
-    now = datetime.now().isoformat()
-    try:
-        with sqlite3.connect(db_path) as conn:
-            cur = conn.cursor()
-            cur.execute("""
-                INSERT INTO trigger_log (config_id, last_trigger_time, frequency, frequencyUM)
-                VALUES (?, ?, ?, ?)
-                ON CONFLICT(config_id) DO UPDATE SET
-                    last_trigger_time = excluded.last_trigger_time,
-                    frequency = excluded.frequency,
-                    frequencyUM = excluded.frequencyUM
-            """, (config_id, now, frequency, frequency_um))
-            conn.commit()
-        logger.debug(f"Saved trigger event for config {config_id}")
-    except Exception as e:
-        logger.error(f"Failed to save trigger event for config {config_id}: {e}")
-
-
-def get_last_trigger_info(config_id: str, db_path: str = "intDB.db") -> tuple[datetime | None, int | None, str | None]:
-    """Retrieve the last trigger timestamp, frequency, and unit for a given configuration.
-
-    Parameters
-    ----------
-    config_id : `str`
-        Identifier of the configuration.
-    db_path : `str`, optional
-        Path to the SQLite database file.
-
-    Returns
-    -------
-    tuple
-        (`datetime or None`, `int or None`, `str or None`)
+    Persist a trained linear regression model.
     """
-    try:
-        with sqlite3.connect(db_path) as conn:
-            cur = conn.cursor()
-            cur.execute("""
-                SELECT ID, last_trigger_time, frequency, frequencyUM
-                FROM trigger_log
-                WHERE config_id = ?
-            """, (config_id,))
-            row = cur.fetchone()
+    ts = datetime.now(CHILE_TZ).isoformat()
+    _execute_query(
+        """
+        INSERT INTO ml_models (measurement, field, slope, intercept, trained_at)
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        (measurement, field, slope, intercept, ts),
+        db_path=db_path,
+    )
 
-        if row and row[0]:
-            try:
-                last_time = datetime.fromisoformat(row[1])
-                return last_time, row[2], row[3]
-            except Exception as e:
-                logger.error(f"Failed to parse last_trigger_time for config {config_id}: {e}")
-    except Exception as e:
-        logger.error(f"Failed to retrieve trigger info for config {config_id}: {e}")
-    return None, None, None
+
+def load_latest_ml_linear_model(
+    measurement: str, field: str,
+    db_path: str = DB_PATH,
+) -> Optional[tuple[float, float]]:
+    """
+    Load the newest model parameters.
+    """
+    rows = _execute_fetch(
+        """
+        SELECT slope, intercept
+        FROM ml_models
+        WHERE measurement = ? AND field = ?
+        ORDER BY id DESC
+        LIMIT 1
+        """,
+        (measurement, field),
+        db_path=db_path,
+    )
+
+    if not rows:
+        return None
+
+    slope, intercept = rows[0]
+    return float(slope), float(intercept)

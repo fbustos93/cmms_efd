@@ -49,6 +49,11 @@ ASSET_ENDPOINT = os.getenv("CMMS_ASSET_ENDPOINT")
 CHILE_TZ = pytz.timezone("America/Santiago")
 
 
+def _console(msg: str) -> None:
+    """Mirror logs to stdout for visibility in Jupyter notebook terminals."""
+    print(msg)
+
+
 def query_latest_influx_value(
     client_efd: EfdQueryClient,
     measurement: str,
@@ -57,25 +62,7 @@ def query_latest_influx_value(
     sal_index: Optional[int] = None,
 ) -> Optional[float]:
     """
-    Query the most recent value from InfluxDB for a given measurement and field.
-
-    Parameters
-    ----------
-    client_efd : EfdQueryClient
-        Client instance used for querying EFD data.
-    measurement : str
-        Measurement table in InfluxDB.
-    field : str
-        Field name to retrieve.
-    interval : str
-        Time interval constraint for the query.
-    sal_index : int, optional
-        Index selector for SAL subsystems.
-
-    Returns
-    -------
-    float or None
-        Last recorded value or None if no data is available.
+    Query the most recent measurement value from InfluxDB.
     """
     if sal_index is not None:
         query = (
@@ -90,77 +77,41 @@ def query_latest_influx_value(
         )
 
     logger.info(f"{LOG_TIME_FORMAT()} Query: {query}")
+    _console(f"[QUERY] {measurement}.{field}")
+
     result = client_efd.query(query)
 
     if result.empty:
         logger.info(f"{LOG_TIME_FORMAT()} No data returned for {measurement}.{field}")
+        _console(f"[NO DATA] {measurement}.{field}")
         return None
 
     return float(result.iloc[0][field])
 
 
 @safe_execution(retries=3, delay=2)
-async def get_cmms_attribute(
-    client: httpx.AsyncClient,
-    token: str,
-    asset_id: str | int,
-    attribute: str,
-) -> Optional[float]:
+async def get_cmms_attribute(client, token, asset_id, attribute) -> Optional[float]:
     """
-    Retrieve the current attribute value of an asset from CMMS.
-
-    Parameters
-    ----------
-    client : httpx.AsyncClient
-        HTTP client session.
-    token : str
-        CMMS authorization token.
-    asset_id : str or int
-        Target asset ID.
-    attribute : str
-        Attribute to retrieve.
-
-    Returns
-    -------
-    float or None
-        The attribute value stored in CMMS, or None if not found.
+    Retrieve an attribute value from CMMS.
     """
     url = f"{ASSET_ENDPOINT}/{asset_id}"
     headers = {"CMDBuild-Authorization": token}
-
     response = await client.get(url, headers=headers)
     response.raise_for_status()
 
     data = response.json().get("data", {})
     value = data.get(attribute)
+
     logger.info(f"{LOG_TIME_FORMAT()} Retrieved {attribute}={value} from asset {asset_id}")
+    _console(f"[GET] {attribute}={value} (asset {asset_id})")
 
     return float(value) if value is not None else None
 
 
 @safe_execution(retries=3, delay=2)
-async def update_cmms_attribute(
-    client: httpx.AsyncClient,
-    token: str,
-    asset_id: str | int,
-    attribute: str,
-    value: float,
-) -> None:
+async def update_cmms_attribute(client, token, asset_id, attribute, value) -> None:
     """
-    Update an attribute value in CMMS for a given asset.
-
-    Parameters
-    ----------
-    client : httpx.AsyncClient
-        HTTP client session.
-    token : str
-        CMMS authorization token.
-    asset_id : str or int
-        Target asset.
-    attribute : str
-        Name of the attribute to update.
-    value : float
-        New value to set.
+    Update a CMMS attribute.
     """
     url = f"{ASSET_ENDPOINT}/{asset_id}"
     headers = {
@@ -173,29 +124,13 @@ async def update_cmms_attribute(
     response.raise_for_status()
 
     logger.info(f"{LOG_TIME_FORMAT()} Updated {attribute}={value} for asset {asset_id}")
+    _console(f"[UPDATE] {attribute}={value} → asset {asset_id}")
 
 
-async def monitor_subsystem(
-    token: str,
-    site: str,
-    db_name: str,
-    config: Dict[str, Any],
-) -> None:
+async def monitor_subsystem(token, site, db_name, config) -> None:
     """
-    Monitor a subsystem based on telemetry configuration and update CMMS attributes.
-
-    Parameters
-    ----------
-    token : str
-        CMMS access token.
-    site : str
-        EFD site name.
-    db_name : str
-        Default database name.
-    config : dict
-        Telemetry configuration entry from system registry.
+    Monitor a subsystem and synchronize telemetry to CMMS.
     """
-    name = config["name"]
     measurement = config["measurement"]
     field = config["field"]
     asset_id = config["asset_id"]
@@ -210,44 +145,31 @@ async def monitor_subsystem(
     async with httpx.AsyncClient(verify=False) as http_client:
         while True:
             try:
+                _console(f"[MONITOR] {config['name']} (asset {asset_id})")
+
                 if telemetry_type == "actuation":
-                    cycle_active = has_24h_passed_since_last_run()
-                    last_run = get_last_run_timestamp()
-
-                    logger.info(
-                        f"{LOG_TIME_FORMAT()} cycle_active={cycle_active}, last_run={last_run}"
-                    )
-
-                    if cycle_active:
+                    if has_24h_passed_since_last_run():
                         activations = get_shutter_activations(site, influx_db_name, measurement, interval)
                         save_shutter_activation_to_db("intDB.db", asset_id, activations)
 
-                        current_cmms_value = await get_cmms_attribute(
-                            http_client, token, asset_id, attribute
-                        ) or 0.0
+                        current = (await get_cmms_attribute(http_client, token, asset_id, attribute)) or 0.0
 
                         if activations > 0:
-                            updated_value = current_cmms_value + activations
-                            await update_cmms_attribute(
-                                http_client, token, asset_id, attribute, updated_value
-                            )
+                            new_value = current + activations
+                            await update_cmms_attribute(http_client, token, asset_id, attribute, new_value)
                             update_last_run_timestamp()
 
                 else:
-                    value = query_latest_influx_value(
-                        client_efd, measurement, field, interval, sal_index
-                    )
+                    value = query_latest_influx_value(client_efd, measurement, field, interval, sal_index)
 
                     if value is not None:
-                        await update_cmms_attribute(
-                            http_client, token, asset_id, attribute, value
-                        )
-
+                        await update_cmms_attribute(http_client, token, asset_id, attribute, value)
                         if measurement == "lsst.sal.MTM1M3.forceActuatorData":
                             ts = datetime.now(CHILE_TZ).strftime("%Y-%m-%dT%H:%M:%S")
                             save_efd_history(ts, measurement, field, value, asset_id)
 
             except Exception as exc:
                 logger.error(f"{LOG_TIME_FORMAT()} [MONITOR ERROR] {exc}", exc_info=True)
+                _console(f"[ERROR] {exc}")
 
             await asyncio.sleep(60)

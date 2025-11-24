@@ -47,6 +47,11 @@ URL_ACTIVITIES = os.getenv("URL_ACTIVITIES")
 URL_ADVANCE = os.getenv("URL_ADVANCE")
 
 
+def _console(msg: str) -> None:
+    """Mirror logs to stdout for visibility in Jupyter notebook terminals."""
+    print(msg)
+
+
 @safe_execution(retries=3, delay=3)
 async def get_prev_maint_configs(client: httpx.AsyncClient, token: str) -> List[Dict[str, Any]]:
     """
@@ -55,40 +60,28 @@ async def get_prev_maint_configs(client: httpx.AsyncClient, token: str) -> List[
     Parameters
     ----------
     client : httpx.AsyncClient
-        HTTP session for CMMS requests.
+        CMMS HTTP client session.
     token : str
         CMMS authorization token.
 
     Returns
     -------
     list of dict
-        List of preventive maintenance configuration entries.
+        Preventive maintenance configuration entries.
     """
     headers = {"CMDBuild-Authorization": token}
     response = await client.get(URL_PREV_MAINT_CONFIG_CARDS, headers=headers, timeout=10)
     response.raise_for_status()
     data = response.json().get("data", [])
     logger.info(f"{LOG_TIME_FORMAT()} Retrieved {len(data)} PM configuration records.")
+    _console(f"[PM CONFIG] Retrieved {len(data)} records")
     return data
 
 
 @safe_execution(retries=3, delay=3)
-async def get_prev_maint_config_by_id(
-    client: httpx.AsyncClient, token: str, config_id: str
-) -> Dict[str, Any]:
+async def get_prev_maint_config_by_id(client: httpx.AsyncClient, token: str, config_id: str) -> Dict[str, Any]:
     """
-    Retrieve detailed configuration from CMMS for a specific preventive maintenance setup.
-
-    Parameters
-    ----------
-    client : httpx.AsyncClient
-    token : str
-    config_id : str
-
-    Returns
-    -------
-    dict
-        Configuration entry or empty dict if unavailable.
+    Retrieve detailed configuration for a specific preventive maintenance setup.
     """
     headers = {"CMDBuild-Authorization": token}
     url = URL_PREV_MAINT_CONFIG_CARD.format(config_id=config_id)
@@ -96,30 +89,17 @@ async def get_prev_maint_config_by_id(
     response.raise_for_status()
     config_data = response.json().get("data", {})
     logger.info(f"{LOG_TIME_FORMAT()} Retrieved PM configuration for {config_id}.")
+    _console(f"[PM CONFIG] Loaded config {config_id}")
     return config_data
 
 
 @safe_execution(retries=3, delay=3)
-async def get_attribute(
-    client: httpx.AsyncClient, token: str, asset_id: int, attribute: str
-) -> Optional[Any]:
+async def get_attribute(client: httpx.AsyncClient, token: str, asset_id: int, attribute: str) -> Optional[Any]:
     """
-    Retrieve an attribute value from a CMMS asset record.
-
-    Parameters
-    ----------
-    client : httpx.AsyncClient
-    token : str
-    asset_id : int
-    attribute : str
-
-    Returns
-    -------
-    Any or None
+    Retrieve an asset attribute value from CMMS.
     """
     headers = {"CMDBuild-Authorization": token}
     url = URL_ASSET_CARD.format(asset_id=asset_id)
-
     response = await client.get(url, headers=headers, timeout=10)
     response.raise_for_status()
 
@@ -127,23 +107,14 @@ async def get_attribute(
     value = data.get(attribute)
 
     logger.info(f"{LOG_TIME_FORMAT()} Asset {asset_id}: {attribute}={value}")
+    _console(f"[ATTRIBUTE] {asset_id}.{attribute} = {value}")
+
     return value
 
 
 def is_trigger_met(value: Any, config: Dict[str, Any]) -> bool:
     """
-    Determine whether a trigger condition defined in the PM configuration is satisfied.
-
-    Parameters
-    ----------
-    value : Any
-        Telemetry input value.
-    config : dict
-        Preventive maintenance configuration.
-
-    Returns
-    -------
-    bool
+    Evaluate whether the trigger condition in the PM config is met.
     """
     try:
         trigger_types = [
@@ -164,20 +135,14 @@ def is_trigger_met(value: Any, config: Dict[str, Any]) -> bool:
         return False
     except Exception as exc:
         logger.error(f"{LOG_TIME_FORMAT()} Trigger evaluation failure: {exc}")
+        _console(f"[TRIGGER ERROR] {exc}")
         return False
 
 
 @safe_execution(retries=3, delay=3)
-async def check_existing_active_pm(
-    client: httpx.AsyncClient, token: str, config_id: str
-) -> Tuple[bool, Optional[str]]:
+async def check_existing_active_pm(client: httpx.AsyncClient, token: str, config_id: str) -> Tuple[bool, Optional[str]]:
     """
-    Check if there is already an active PM instance for this configuration.
-
-    Returns
-    -------
-    (bool, str or None)
-        Whether an active PM exists, and its ID if so.
+    Check whether an active PM instance already exists for this configuration.
     """
     headers = {"CMDBuild-Authorization": token}
     response = await client.get(URL_CREATE_PM_INSTANCE, headers=headers, timeout=10)
@@ -187,29 +152,24 @@ async def check_existing_active_pm(
         if pm.get("PrevMaintConfig") == config_id:
             status = (pm.get("_status_description") or "").lower()
             if status != "aborted":
+                _console(f"[PM EXISTS] {config_id} (PM ID: {pm.get('_id')})")
                 return True, pm.get("_id")
 
     return False, None
 
 
 @safe_execution(retries=3, delay=3)
-async def create_pm(
-    client: httpx.AsyncClient, token: str, config_id: str
-) -> Optional[str]:
+async def create_pm(client: httpx.AsyncClient, token: str, config_id: str) -> Optional[str]:
     """
     Create a new preventive maintenance instance in CMMS.
-
-    Returns
-    -------
-    str or None
-        Newly created PM instance ID.
     """
     config_data = await get_prev_maint_config_by_id(client, token, config_id)
     if not config_data:
         return None
 
     payload = {key: config_data.get(key) for key in [
-        "Description", "Site", "Action", "CISubset", "Team", "Priority", "EstimatedDuration", "Notes", "ActivityType"
+        "Description", "Site", "Action", "CISubset", "Team", "Priority",
+        "EstimatedDuration", "Notes", "ActivityType",
     ]}
     payload["maintConf"] = config_id
     payload["PrevMaintConfig"] = config_id
@@ -219,24 +179,22 @@ async def create_pm(
     response = await client.post(URL_CREATE_PM_INSTANCE, headers=headers, json=payload, timeout=10)
     response.raise_for_status()
 
-    return response.json().get("data", {}).get("_id")
+    new_id = response.json().get("data", {}).get("_id")
+    _console(f"[PM CREATED] {new_id}")
+    return new_id
 
 
 @safe_execution(retries=3, delay=3)
 async def advance_pm(client: httpx.AsyncClient, token: str, pm_id: str) -> bool:
     """
-    Advance a PM instance to the planning stage.
-
-    Returns
-    -------
-    bool
+    Advance a PM instance to planning stage.
     """
     headers = {"CMDBuild-Authorization": token, "Content-Type": "application/json"}
 
     url_activities = URL_ACTIVITIES.format(pm_id=pm_id)
-    response_act = await client.get(url_activities, headers=headers, timeout=10)
-    response_act.raise_for_status()
-    activity_id = response_act.json()["data"][0]["_id"]
+    resp_acts = await client.get(url_activities, headers=headers, timeout=10)
+    resp_acts.raise_for_status()
+    activity_id = resp_acts.json()["data"][0]["_id"]
 
     payload = {
         "_activity": activity_id,
@@ -247,15 +205,16 @@ async def advance_pm(client: httpx.AsyncClient, token: str, pm_id: str) -> bool:
     }
 
     url_advance = URL_ADVANCE.format(pm_id=pm_id)
-    response_advance = await client.put(url_advance, headers=headers, json=payload, timeout=10)
-    response_advance.raise_for_status()
+    resp_adv = await client.put(url_advance, headers=headers, json=payload, timeout=10)
+    resp_adv.raise_for_status()
 
+    _console(f"[PM ADVANCED] {pm_id}")
     return True
 
 
 async def maintenance_loop(token: str) -> None:
     """
-    Continuous execution loop to evaluate triggers and create PM records.
+    Continuous execution loop to evaluate triggers and create PM instances.
     """
     async with httpx.AsyncClient(verify=False) as client:
         while True:
@@ -265,6 +224,7 @@ async def maintenance_loop(token: str) -> None:
                 system_configs = read_config_from_db()
             except Exception as exc:
                 logger.error(f"{LOG_TIME_FORMAT()} Failed to load local config DB: {exc}")
+                _console(f"[LOCAL CONFIG ERROR] {exc}")
                 await asyncio.sleep(60)
                 continue
 

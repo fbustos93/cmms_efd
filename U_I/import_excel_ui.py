@@ -1,3 +1,4 @@
+# import_excel_panel.py
 from __future__ import annotations
 
 import os
@@ -5,132 +6,98 @@ import sys
 from typing import List, Dict, Any
 
 import pandas as pd
+import panel as pn
 from dotenv import load_dotenv
-from nicegui import ui
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from backend.logger_setup import logger, LOG_TIME_FORMAT
 from config_loader import read_config_from_db
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 load_dotenv()
 
 
 def import_from_excel(file_path: str) -> pd.DataFrame:
     """
-    Load and return data from an Excel file into a DataFrame.
+    Load data from an Excel file into a DataFrame.
 
     Parameters
     ----------
     file_path : str
-        Path to the Excel file.
+        Local path of the file.
 
     Returns
     -------
     pandas.DataFrame
-        DataFrame containing the imported Excel data or an empty DataFrame if import fails.
+        Imported table or empty DataFrame if import fails.
     """
     try:
         df = pd.read_excel(file_path)
-        logger.info(f"{LOG_TIME_FORMAT()} Imported data from Excel file: {file_path}")
+        logger.info(f"{LOG_TIME_FORMAT()} Imported Excel file: {file_path}")
         return df
     except Exception as exc:
-        ui.notify("Failed to import Excel file.", type="negative")
-        logger.error(f"{LOG_TIME_FORMAT()} Excel import failed: {exc}")
+        logger.error(f"{LOG_TIME_FORMAT()} Excel import failed: {exc}", exc_info=True)
         return pd.DataFrame()
 
 
-def to_ng_columns(columns: List[str]) -> List[Dict[str, str]]:
+def create_panel() -> pn.Column:
     """
-    Convert DataFrame column names into NiceGUI-compatible table column definitions.
-
-    Parameters
-    ----------
-    columns : list of str
-        Column names to convert.
+    Construct the Panel UI for importing and previewing Excel configuration data.
 
     Returns
     -------
-    list of dict
-        NiceGUI table column definitions.
+    pn.Column
+        Layout containing upload widget and preview table.
     """
-    return [{"name": c, "label": c, "field": c} for c in columns]
+    title = pn.pane.Markdown("### Import Excel Data")
+    table_placeholder = pn.Spacer(height=10)
 
+    upload = pn.widgets.FileInput(accept=".xlsx,.xls")
 
-def create_ui() -> None:
-    """
-    Render the Excel import and configuration preview interface.
-    """
-    ui.label("Import Excel Data").classes("text-h5 text-bold mt-4 mb-2")
-    table_container = ui.column().classes("w-full")
-
-    def handle_upload(event: Any) -> None:
-        """
-        Process the uploaded Excel file and display its preview.
-
-        Parameters
-        ----------
-        event : Any
-            NiceGUI upload event containing file metadata.
-        """
-        uploaded_file = event.name
-        if not uploaded_file:
-            ui.notify("No file uploaded.", type="warning")
+    def handle_upload(event=None) -> None:
+        if not upload.value:
+            table_placeholder.objects = [pn.pane.Markdown("**No file selected.**")]
             return
 
+        file_path = upload.filename
         try:
-            file_path = os.path.join(event.path, uploaded_file)
-            df = import_from_excel(file_path)
-        except Exception as exc:
-            ui.notify("Error reading uploaded file.", type="negative")
-            logger.error(f"{LOG_TIME_FORMAT()} Failed to read uploaded file: {exc}")
+            with open(file_path, "wb") as f:
+                f.write(upload.value)
+        except Exception:
+            table_placeholder.objects = [pn.pane.Markdown("**Failed to save uploaded file**", style={"color": "red"})]
             return
 
+        df = import_from_excel(file_path)
         if df.empty:
-            ui.notify("The uploaded file is empty or invalid.", type="warning")
+            table_placeholder.objects = [pn.pane.Markdown("**The file is empty or invalid.**")]
             return
 
-        table_container.clear()
-        ui.label("Imported Excel Data").classes("text-subtitle1 mb-2")
+        preview = df.head(50).fillna("")
+        cols = [c for c in preview.columns if c in ("name", "measurement", "field", "attribute")]
 
-        preview = df.fillna("").head(50)
-        columns = [
-            col for col in preview.columns
-            if col in ("name", "measurement", "field", "attribute")
+        if not cols:
+            table_placeholder.objects = [pn.pane.Markdown("**No configuration fields found in the file.**")]
+            return
+
+        table_placeholder.objects = [
+            pn.widgets.Tabulator(preview[cols], height=350, layout="fit_data_stretch")
         ]
+        logger.info(f"{LOG_TIME_FORMAT()} Displayed preview of uploaded Excel data ({len(preview)} rows).")
 
-        ng_columns = to_ng_columns(columns)
-        rows = preview[columns].to_dict(orient="records")
+    upload.param.watch(handle_upload, "value")
 
-        ui.table(columns=ng_columns, rows=rows).classes("w-full mt-2")
-        logger.info(f"{LOG_TIME_FORMAT()} Displayed preview of uploaded Excel data.")
-
-    ui.upload(
-        label="Choose an Excel file",
-        multiple=False,
-        auto_upload=True,
-        on_upload=handle_upload,
-    ).classes("mt-2 mb-4")
-
-    async def load_from_db() -> None:
-        """
-        Load and display configuration records stored in the local DB.
-        """
+    def load_from_db(event=None) -> None:
         try:
             configs = read_config_from_db()
         except Exception as exc:
-            ui.notify("Failed to read local configuration.", type="negative")
-            logger.error(f"{LOG_TIME_FORMAT()} Local DB read failed: {exc}")
+            logger.error(f"{LOG_TIME_FORMAT()} DB read error: {exc}", exc_info=True)
+            table_placeholder.objects = [pn.pane.Markdown("**Failed to read configuration database.**")]
             return
 
         if not configs:
-            ui.notify("No configurations found in the local database.", type="warning")
+            table_placeholder.objects = [pn.pane.Markdown("**No stored configurations found.**")]
             return
 
-        table_container.clear()
-        ui.label("Configurations from Database").classes("text-subtitle1 mb-2")
-
-        table_data = [
+        rows = [
             {
                 "Name": c.get("name", ""),
                 "Measurement": c.get("measurement", ""),
@@ -140,11 +107,19 @@ def create_ui() -> None:
             for c in configs
         ]
 
-        ng_columns = to_ng_columns(list(table_data[0].keys()))
-        ui.table(columns=ng_columns, rows=table_data).classes("w-full mt-2")
+        df = pd.DataFrame(rows)
+        table_placeholder.objects = [
+            pn.widgets.Tabulator(df, height=350, layout="fit_data_stretch")
+        ]
+        logger.info(f"{LOG_TIME_FORMAT()} Displayed {len(rows)} DB configuration rows.")
 
-        logger.info(f"{LOG_TIME_FORMAT()} Displayed {len(table_data)} local DB configurations.")
+    load_btn = pn.widgets.Button(name="Load Configurations from DB", button_type="primary")
+    load_btn.on_click(load_from_db)
 
-    ui.button("Load Configurations from DB", on_click=load_from_db).classes(
-        "mt-4 bg-blue-600 text-white"
+    return pn.Column(
+        title,
+        upload,
+        load_btn,
+        table_placeholder,
+        sizing_mode="stretch_width",
     )
