@@ -60,8 +60,6 @@ Documentation includes:
 * Developer Guide
 * User Guide
 
----
-
 # Project Status
 
 CDIAT is currently under active development.
